@@ -1,6 +1,5 @@
 package com.nky.community.entity;
 
-
 import lombok.Data;
 
 /**
@@ -10,13 +9,15 @@ import lombok.Data;
  * @version:1.0
  */
 @Data
-public class User {
+public class Question {
     private Integer id;
-    private String accountId;
-    private String name;
-    private String token;
+    private String title;
+    private String description;
+    private String tag;
     private Long gmtCreate;
     private Long gmtModified;
-    private String avatarURL;
-
+    private Integer creator;
+    private Integer commentCount;
+    private Integer viewCount;
+    private Integer likeCount;
 }
