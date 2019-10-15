@@ -39,7 +39,7 @@ public class PaginationDTO {
         if (page != 1) {
             showPrevious = true;
         }
-        if (page != totalPage) {
+        if (!page.equals(totalPage)) {
             showNext = true;
         }
         if (!pages.contains(1)) {

@@ -5,22 +5,20 @@ import lombok.Data;
 
 /**
  * @Auther:nky
- * @Date:2019/10/10
+ * @Date:2019/10/13
  * @Description:com.nky.community.dto
  * @version:1.0
  */
 @Data
-public class QuestionDTO {
+public class CommentDTO {
     private Long id;
-    private String title;
-    private String description;
-    private String tag;
+    private Long parentId;
+    private Integer type;
+    private Long commentator;
     private Long gmtCreate;
     private Long gmtModified;
-    private Long creator;
+    private Long likeCount;
     private Integer commentCount;
-    private Integer viewCount;
-    private Integer likeCount;
-
+    private String content;
     private User user;
 }
