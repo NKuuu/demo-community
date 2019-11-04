@@ -1,9 +1,9 @@
 create table comment
 (
-	id bigint auto_increment,
+	id bigint auto_increment not null,
 	parent_id bigint not null,
 	type int not null,
-	commentator int not null,
+	commentator bigint not null,
 	gmt_create bigint not null,
 	gmt_modified bigint not null,
 	like_count bigint default 0,

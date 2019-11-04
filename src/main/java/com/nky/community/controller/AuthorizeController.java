@@ -41,7 +41,7 @@ public class AuthorizeController {
                            @RequestParam("state") String state,
                            HttpServletRequest request,
                            HttpServletResponse response
-                           ) {
+    ) {
         AccessTokenDTO accessTokenDTO = new AccessTokenDTO();
         accessTokenDTO.setClient_id(clientId);
         accessTokenDTO.setClient_secret(clientSecret);
@@ -59,7 +59,7 @@ public class AuthorizeController {
             user.setAvatarUrl(githubUser.getAvatar_url());
             userService.createUpdate(user);
             // 登录成功，写cookie和session
-            response.addCookie(new Cookie("token",token));
+            response.addCookie(new Cookie("token", token));
             return "redirect:/";
         } else {
             // 登录失败，重新登录
@@ -72,7 +72,7 @@ public class AuthorizeController {
                          HttpServletResponse response) {
 
         request.getSession().removeAttribute("user");
-        Cookie cookie = new Cookie("token",null);
+        Cookie cookie = new Cookie("token", null);
         cookie.setMaxAge(0);
         response.addCookie(cookie);
         return "redirect:/";

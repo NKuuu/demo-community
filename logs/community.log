@@ -1,0 +1,64 @@
+2019-11-04 19:41:02.602  INFO 15704 --- [restartedMain] com.nky.community.CommunityApplication   : Starting CommunityApplication on nekoyu with PID 15704 (D:\IDEA_Projects\Myself_Projects\community\target\classes started by nekoyu in D:\IDEA_Projects\Myself_Projects\community)
+2019-11-04 19:41:02.605  INFO 15704 --- [restartedMain] com.nky.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2019-11-04 19:41:02.671  INFO 15704 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-04 19:41:02.671  INFO 15704 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-04 19:41:04.107  INFO 15704 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2019-11-04 19:41:04.146  INFO 15704 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-04 19:41:04.147  INFO 15704 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.26]
+2019-11-04 19:41:04.258  INFO 15704 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-04 19:41:04.259  INFO 15704 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 1588 ms
+2019-11-04 19:41:04.457  INFO 15704 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-11-04 19:41:04.935  INFO 15704 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-11-04 19:41:05.540  INFO 15704 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-04 19:41:05.610  INFO 15704 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-04 19:41:05.843  INFO 15704 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-04 19:41:05.908  INFO 15704 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2019-11-04 19:41:05.912  INFO 15704 --- [restartedMain] com.nky.community.CommunityApplication   : Started CommunityApplication in 3.89 seconds (JVM running for 4.986)
+2019-11-04 19:41:34.572  INFO 15704 --- [Thread-13] o.s.s.concurrent.ThreadPoolTaskExecutor  : Shutting down ExecutorService 'applicationTaskExecutor'
+2019-11-04 19:41:34.573  INFO 15704 --- [Thread-13] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closing ...
+2019-11-04 19:41:34.578  INFO 15704 --- [Thread-13] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} closed
+2019-11-04 19:41:35.104  INFO 15704 --- [restartedMain] com.nky.community.CommunityApplication   : Starting CommunityApplication on nekoyu with PID 15704 (D:\IDEA_Projects\Myself_Projects\community\target\classes started by nekoyu in D:\IDEA_Projects\Myself_Projects\community)
+2019-11-04 19:41:35.106  INFO 15704 --- [restartedMain] com.nky.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2019-11-04 19:41:35.425  INFO 15704 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2019-11-04 19:41:35.427  INFO 15704 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-04 19:41:35.427  INFO 15704 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.26]
+2019-11-04 19:41:35.459  INFO 15704 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-04 19:41:35.459  INFO 15704 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 351 ms
+2019-11-04 19:41:35.498  INFO 15704 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-11-04 19:41:35.575  INFO 15704 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-2} inited
+2019-11-04 19:41:35.714  INFO 15704 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-04 19:41:35.733  INFO 15704 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-04 19:41:35.833  INFO 15704 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-04 19:41:35.859  INFO 15704 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2019-11-04 19:41:35.860  INFO 15704 --- [restartedMain] com.nky.community.CommunityApplication   : Started CommunityApplication in 0.786 seconds (JVM running for 34.935)
+2019-11-04 19:41:35.862  INFO 15704 --- [restartedMain] .ConditionEvaluationDeltaLoggingListener : Condition evaluation unchanged
+2019-11-04 19:53:44.899  INFO 15484 --- [restartedMain] com.nky.community.CommunityApplication   : Starting CommunityApplication on nekoyu with PID 15484 (D:\IDEA_Projects\Myself_Projects\community\target\classes started by nekoyu in D:\IDEA_Projects\Myself_Projects\community)
+2019-11-04 19:53:44.904  INFO 15484 --- [restartedMain] com.nky.community.CommunityApplication   : No active profile set, falling back to default profiles: default
+2019-11-04 19:53:44.966  INFO 15484 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : Devtools property defaults active! Set 'spring.devtools.add-properties' to 'false' to disable
+2019-11-04 19:53:44.967  INFO 15484 --- [restartedMain] .e.DevToolsPropertyDefaultsPostProcessor : For additional web related logging consider setting the 'logging.level.web' property to 'DEBUG'
+2019-11-04 19:53:47.049  INFO 15484 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat initialized with port(s): 8081 (http)
+2019-11-04 19:53:47.113  INFO 15484 --- [restartedMain] o.apache.catalina.core.StandardService   : Starting service [Tomcat]
+2019-11-04 19:53:47.115  INFO 15484 --- [restartedMain] org.apache.catalina.core.StandardEngine  : Starting Servlet engine: [Apache Tomcat/9.0.26]
+2019-11-04 19:53:47.270  INFO 15484 --- [restartedMain] o.a.c.c.C.[Tomcat].[localhost].[/]       : Initializing Spring embedded WebApplicationContext
+2019-11-04 19:53:47.271  INFO 15484 --- [restartedMain] o.s.web.context.ContextLoader            : Root WebApplicationContext: initialization completed in 2303 ms
+2019-11-04 19:53:47.459  INFO 15484 --- [restartedMain] c.a.d.s.b.a.DruidDataSourceAutoConfigure : Init DruidDataSource
+2019-11-04 19:53:47.903  INFO 15484 --- [restartedMain] com.alibaba.druid.pool.DruidDataSource   : {dataSource-1} inited
+2019-11-04 19:53:48.442  INFO 15484 --- [restartedMain] o.s.s.concurrent.ThreadPoolTaskExecutor  : Initializing ExecutorService 'applicationTaskExecutor'
+2019-11-04 19:53:48.539  INFO 15484 --- [restartedMain] o.s.b.a.w.s.WelcomePageHandlerMapping    : Adding welcome page template: index
+2019-11-04 19:53:48.750  INFO 15484 --- [restartedMain] o.s.s.c.ThreadPoolTaskScheduler          : Initializing ExecutorService 'taskScheduler'
+2019-11-04 19:53:48.843  INFO 15484 --- [restartedMain] o.s.b.d.a.OptionalLiveReloadServer       : LiveReload server is running on port 35729
+2019-11-04 19:53:48.881  INFO 15484 --- [scheduling-1] com.nky.community.scheduled.HotTagTasks  : The time is now Mon Nov 04 19:53:48 CST 2019
+2019-11-04 19:53:48.908  INFO 15484 --- [restartedMain] o.s.b.w.embedded.tomcat.TomcatWebServer  : Tomcat started on port(s): 8081 (http) with context path ''
+2019-11-04 19:53:48.912  INFO 15484 --- [restartedMain] com.nky.community.CommunityApplication   : Started CommunityApplication in 4.608 seconds (JVM running for 5.934)
+2019-11-04 19:53:53.883  INFO 15484 --- [scheduling-1] com.nky.community.scheduled.HotTagTasks  : The time is now Mon Nov 04 19:53:53 CST 2019
+2019-11-04 19:53:58.881  INFO 15484 --- [scheduling-1] com.nky.community.scheduled.HotTagTasks  : The time is now Mon Nov 04 19:53:58 CST 2019
+2019-11-04 19:54:03.882  INFO 15484 --- [scheduling-1] com.nky.community.scheduled.HotTagTasks  : The time is now Mon Nov 04 19:54:03 CST 2019
+2019-11-04 19:54:08.882  INFO 15484 --- [scheduling-1] com.nky.community.scheduled.HotTagTasks  : The time is now Mon Nov 04 19:54:08 CST 2019
+2019-11-04 19:54:13.881  INFO 15484 --- [scheduling-1] com.nky.community.scheduled.HotTagTasks  : The time is now Mon Nov 04 19:54:13 CST 2019
+2019-11-04 19:54:18.882  INFO 15484 --- [scheduling-1] com.nky.community.scheduled.HotTagTasks  : The time is now Mon Nov 04 19:54:18 CST 2019
+2019-11-04 19:54:23.881  INFO 15484 --- [scheduling-1] com.nky.community.scheduled.HotTagTasks  : The time is now Mon Nov 04 19:54:23 CST 2019
+2019-11-04 19:54:28.881  INFO 15484 --- [scheduling-1] com.nky.community.scheduled.HotTagTasks  : The time is now Mon Nov 04 19:54:28 CST 2019
+2019-11-04 19:54:33.882  INFO 15484 --- [scheduling-1] com.nky.community.scheduled.HotTagTasks  : The time is now Mon Nov 04 19:54:33 CST 2019
+2019-11-04 19:54:38.881  INFO 15484 --- [scheduling-1] com.nky.community.scheduled.HotTagTasks  : The time is now Mon Nov 04 19:54:38 CST 2019
+2019-11-04 19:54:43.881  INFO 15484 --- [scheduling-1] com.nky.community.scheduled.HotTagTasks  : The time is now Mon Nov 04 19:54:43 CST 2019
+2019-11-04 19:54:48.882  INFO 15484 --- [scheduling-1] com.nky.community.scheduled.HotTagTasks  : The time is now Mon Nov 04 19:54:48 CST 2019

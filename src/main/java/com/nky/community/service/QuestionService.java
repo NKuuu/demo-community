@@ -75,7 +75,7 @@ public class QuestionService {
             queryDTO.setUser(user);
             queryDTOList.add(queryDTO);
         }
-        paginationDTO.setQuestions(queryDTOList);
+        paginationDTO.setData(queryDTOList);
         return paginationDTO;
     }
 
@@ -118,7 +118,7 @@ public class QuestionService {
             queryDTO.setUser(user);
             queryDTOList.add(queryDTO);
         }
-        paginationDTO.setQuestions(queryDTOList);
+        paginationDTO.setData(queryDTOList);
         return paginationDTO;
     }
 

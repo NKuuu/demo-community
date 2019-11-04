@@ -43,7 +43,7 @@ public class UserService {
             UserExample example = new UserExample();
             example.createCriteria()
                     .andIdEqualTo(dbUser.getId());
-            userMapper.updateByExampleSelective(updateUser,example);
+            userMapper.updateByExampleSelective(updateUser, example);
         }
 
     }

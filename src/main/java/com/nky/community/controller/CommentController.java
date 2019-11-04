@@ -32,17 +32,38 @@ public class CommentController {
     @Autowired
     CommentService commentService;
 
-    @RequestMapping(value = "/comment", method = RequestMethod.POST)
+    /**
+     * 打开二级评论时拿数据
+     *
+     * @param id
+     * @return
+     */
     @ResponseBody
+    @RequestMapping(value = "/comment/{id}", method = RequestMethod.GET)
+    public ResultDTO comments(@PathVariable(name = "id") Long id) {
+        List<CommentDTO> commentDTOS = commentService.listByQuestionId(id, CommentTypeEnum.COMMENT);
+        return ResultDTO.okOf(commentDTOS);
+    }
+
+    /**
+     * 回复及二级评论时调用的接口，先进行判断在保存数据
+     *
+     * @param commentCreateDTO
+     * @param request
+     * @return
+     */
+    @ResponseBody
+    @RequestMapping(value = "/comment", method = RequestMethod.POST)
     public Object post(@RequestBody CommentCreateDTO commentCreateDTO,
                        HttpServletRequest request) {
 
         User user = (User) request.getSession().getAttribute("user");
+        // 判断登录状态
         if (user == null) {
             return ResultDTO.errorOf(CustomizeErrorCode.NO_LOGIN);
         }
-
-       if (commentCreateDTO == null || StringUtils.isBlank(commentCreateDTO.getContent())) {
+        // 判断 回复DTO 以及 DTO的内容 是否为空
+        if (commentCreateDTO == null || StringUtils.isBlank(commentCreateDTO.getContent())) {
             return ResultDTO.errorOf(CustomizeErrorCode.CONTENT_IS_EMPTY);
         }
 
@@ -55,15 +76,8 @@ public class CommentController {
         comment.setCommentator(user.getId());
         comment.setCommentCount(0);
         comment.setLikeCount(0L);
-        commentService.insert(comment);
+        commentService.insert(comment, user);
         return ResultDTO.okOf();
-    }
-
-    @ResponseBody
-    @RequestMapping(value = "/comment/{id}", method = RequestMethod.GET)
-    public ResultDTO comments(@PathVariable(name = "id") Long id) {
-        List<CommentDTO> commentDTOS = commentService.listByQuestionId(id, CommentTypeEnum.COMMENT);
-        return ResultDTO.okOf(commentDTOS);
     }
 
 }

@@ -13,7 +13,6 @@ import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
  * @version:1.0
  */
 @Configuration
-//@EnableWebMvc
 public class WebConfig implements WebMvcConfigurer {
 
     @Autowired
@@ -21,7 +20,8 @@ public class WebConfig implements WebMvcConfigurer {
 
     @Override
     public void addInterceptors(InterceptorRegistry registry) {
-        registry.addInterceptor(sessionInterceptor).addPathPatterns("/**");
+        registry.addInterceptor(sessionInterceptor).addPathPatterns("/**")
+                .excludePathPatterns("/css/**", "/js/**", "/images/**", "/fonts/**");
     }
 
 }

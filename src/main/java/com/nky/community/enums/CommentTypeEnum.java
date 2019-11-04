@@ -8,7 +8,7 @@ package com.nky.community.enums;
  */
 public enum CommentTypeEnum {
     /**
-     *  评论类型
+     * 评论类型
      */
     QUESTION(1),
     COMMENT(2);
