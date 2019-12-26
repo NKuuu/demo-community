@@ -107,16 +107,6 @@
             <scope>test</scope>
         </dependency>
 
-        <!-- 日志门面与实现 -->
-        <dependency>
-            <groupId>org.slf4j</groupId>
-            <artifactId>slf4j-api</artifactId>
-        </dependency>
-        <dependency>
-            <groupId>ch.qos.logback</groupId>
-            <artifactId>logback-core</artifactId>
-        </dependency>
-
     </dependencies>
 
     <build>

@@ -1,5 +1,5 @@
 server:
-  port: 8081
+  port: 8080
   servlet:
     session:
       timeout: 15552000
@@ -9,7 +9,8 @@ github:
     id: fbba6328edb300654cc7
     secret: 89840cc55fde81aa90585a43fc38de30ef231574
   redirect:
-    uri: http://localhost:8081/callback
+    uri: http://localhost:8080/callback
+
 
 mybatis:
   configuration:
@@ -28,6 +29,8 @@ spring:
       min-idle: 10
       initial-size: 15
       max-active: 30
+  thymeleaf:
+    cache: false
 #    url: jdbc:h2:~/community
 #    username: sa
 #    password: 123

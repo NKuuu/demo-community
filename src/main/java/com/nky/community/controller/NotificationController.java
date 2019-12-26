@@ -31,12 +31,12 @@ public class NotificationController {
     @GetMapping("/notification/{id}")
     public String profile(HttpServletRequest request,
                           @PathVariable(name = "id") Long id) {
-
+        // 判断登录态
         User user = (User) request.getSession().getAttribute("user");
         if (user == null) {
             return "redirect:/";
         }
-
+        //
         NotificationDTO notificationDTO = notificationService.read(id, user);
 
         if (NotificationTypeEnum.REPLY_COMMENT.getType() == notificationDTO.getType()

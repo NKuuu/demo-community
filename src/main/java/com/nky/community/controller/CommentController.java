@@ -76,6 +76,7 @@ public class CommentController {
         comment.setCommentator(user.getId());
         comment.setCommentCount(0);
         comment.setLikeCount(0L);
+
         commentService.insert(comment, user);
         return ResultDTO.okOf();
     }

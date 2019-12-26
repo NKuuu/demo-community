@@ -15,6 +15,8 @@ import javax.servlet.http.HttpServletRequest;
  * @Date:2019/10/12
  * @Description:com.nky.community.controller
  * @version:1.0
+ *
+ * 客户端错误处理
  */
 @Controller
 @RequestMapping("${server.error.path:${error.path:/error}}")

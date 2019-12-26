@@ -33,7 +33,7 @@
                         <a href="/profile/replies">通知 <span class="badge" th:text="${session.unreadCount}"></span></a>
                     </li>
                     <li th:if="${session.user == null}">
-                        <a href="https://github.com/login/oauth/authorize?client_id=fbba6328edb300654cc7&redirect_url=http://localhost:8081/callback&scope=user&state=1">登录</a>
+                        <a href="https://github.com/login/oauth/authorize?client_id=fbba6328edb300654cc7&redirect_url=http://localhost:8080/callback&scope=user&state=1">登录</a>
                     </li>
                     </li>
                     <li class="dropdown" th:if="${session.user != null}">

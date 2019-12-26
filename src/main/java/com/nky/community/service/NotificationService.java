@@ -37,11 +37,6 @@ public class NotificationService {
 
     /**
      * 拿到消息数据
-     *
-     * @param userId
-     * @param page
-     * @param size
-     * @return
      */
     public PaginationDTO list(Long userId, Integer page, Integer size) {
         // 创建消息DTO

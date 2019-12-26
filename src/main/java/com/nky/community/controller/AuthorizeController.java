@@ -5,6 +5,7 @@ import com.nky.community.dto.GithubUser;
 import com.nky.community.entity.User;
 import com.nky.community.provider.GithubProvider;
 import com.nky.community.service.UserService;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.factory.annotation.Value;
 import org.springframework.stereotype.Controller;
@@ -24,6 +25,7 @@ import java.util.UUID;
  * @version:1.0
  */
 @Controller
+@Slf4j
 public class AuthorizeController {
     @Autowired
     private GithubProvider githubProvider;
@@ -34,7 +36,7 @@ public class AuthorizeController {
     @Value("${github.redirect.uri}")
     private String redirectURI;
     @Autowired
-    UserService userService;
+    private UserService userService;
 
     @RequestMapping("/callback")
     public String callback(@RequestParam("code") String code,
@@ -42,17 +44,23 @@ public class AuthorizeController {
                            HttpServletRequest request,
                            HttpServletResponse response
     ) {
+        // 封装AccessTokenDTO
         AccessTokenDTO accessTokenDTO = new AccessTokenDTO();
         accessTokenDTO.setClient_id(clientId);
         accessTokenDTO.setClient_secret(clientSecret);
         accessTokenDTO.setCode(code);
         accessTokenDTO.setRedirect_uri(redirectURI);
         accessTokenDTO.setState(state);
+
+        // 拿到github中的oauth的token
         String accessToken = githubProvider.getAccessToken(accessTokenDTO);
+        // 根据token数据，筛选出需要的数据的字段
         GithubUser githubUser = githubProvider.getUser(accessToken);
+
         if (githubUser != null && githubUser.getId() != null) {
             User user = new User();
             String token = UUID.randomUUID().toString();
+            // 将拿到的user数据封装成一张表
             user.setToken(token);
             user.setName(githubUser.getName());
             user.setAccountId(String.valueOf(githubUser.getId()));
@@ -62,6 +70,7 @@ public class AuthorizeController {
             response.addCookie(new Cookie("token", token));
             return "redirect:/";
         } else {
+            log.error("callback get github error,{}", githubUser);
             // 登录失败，重新登录
             return "redirect:/";
         }
@@ -72,6 +81,7 @@ public class AuthorizeController {
                          HttpServletResponse response) {
 
         request.getSession().removeAttribute("user");
+        // 覆盖之前的token，并设置最大存活时间为0
         Cookie cookie = new Cookie("token", null);
         cookie.setMaxAge(0);
         response.addCookie(cookie);

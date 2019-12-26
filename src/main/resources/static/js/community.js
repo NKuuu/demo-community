@@ -1,3 +1,6 @@
+/**
+ * 回复及二级评论 提交
+ */
 function comment2target(targetId, type, content) {
     if (!content) {
         alert("不能回复空内容");
@@ -69,6 +72,7 @@ function collapseComments(e) {
         e.removeAttribute("data-collapse");
         e.classList.remove("active");
     } else {
+        // 二级评论容器
         var subCommentContainer = $("#comment-" + id);
 
         if (subCommentContainer.children().length != 1) {
@@ -80,14 +84,14 @@ function collapseComments(e) {
         } else {
             $.getJSON("/comment/" + id, function (data) {
                 $.each(data.data.reverse(), function (index, comment) {
-
+                    // 二级评论的左边部分：用户头像
                     var mediaLeftElement = $("<div/>", {
                         "class": "media-left"
                     }).append($("<img/>", {
                         "class": "media-object img-rounded",
                         "src": comment.user.avatarUrl
                     }));
-
+                    // 二级评论的body部分
                     var mediaBodyElement = $("<div/>", {
                         "class": "media-body"
                     }).append($("<h5/>", {
@@ -110,6 +114,7 @@ function collapseComments(e) {
                         "class": "col-lg-12 col-md-12 col-sm-12 col-xs-12 comment_reply",
                     }).append(mediaElement);
 
+                    // 将拼好的html添加进二级评论容器中
                     subCommentContainer.prepend(commentElement);
                 });
             });
@@ -122,11 +127,12 @@ function collapseComments(e) {
     }
 }
 
+// 展示标签栏
 function showSelectTag() {
     $("#select-tag").show();
 
 }
-
+// 选中标签
 function selectTag(e) {
     var value = e.getAttribute("data-tag");
     var previous = $("#tag").val();

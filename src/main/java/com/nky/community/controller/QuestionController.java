@@ -38,8 +38,11 @@ public class QuestionController {
 
         // 累加阅读数
         questionService.incView(id);
+        // 问题数据返回
         model.addAttribute("question", questionDTO);
+        // 评论数据返回
         model.addAttribute("comments", comments);
+        //对应的关联数据
         model.addAttribute("relatedQuestions", relatedQuestions);
         return "question";
     }

@@ -171,13 +171,16 @@ public class QuestionService {
         if (StringUtils.isBlank(queryDTO.getTag())) {
             return new ArrayList<>();
         }
+        // 获取问题中的标签数据
         String[] tags = StringUtils.split(queryDTO.getTag(), ",");
         String regexpTag = Arrays.stream(tags).collect(Collectors.joining("|"));
+        // 将问题id对应的标签存入表中
         Question question = new Question();
         question.setId(queryDTO.getId());
         question.setTag(regexpTag);
 
         List<Question> questions = questionExtMapper.selectRelated(question);
+
         List<QuestionDTO> questionDTOS = questions.stream().map(q -> {
             QuestionDTO questionDTO = new QuestionDTO();
             BeanUtils.copyProperties(q, questionDTO);

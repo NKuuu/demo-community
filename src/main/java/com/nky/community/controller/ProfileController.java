@@ -18,14 +18,20 @@ import javax.servlet.http.HttpServletRequest;
  * @Date:2019/10/11
  * @Description:com.nky.community.controller
  * @version:1.0
+ *
+ * 个人相关页 ： 个人问题、最新回复
  */
 @Controller
 public class ProfileController {
+
     @Autowired
     QuestionService questionService;
     @Autowired
     private NotificationService notificationService;
 
+    /**
+     * 根据不同的action（前端传入）返回不同的内容
+     */
     @GetMapping("/profile/{action}")
     public String profile(HttpServletRequest request,
                           @PathVariable(name = "action") String action,
@@ -33,6 +39,7 @@ public class ProfileController {
                           @RequestParam(name = "page", defaultValue = "1") Integer page,
                           @RequestParam(name = "size", defaultValue = "5") Integer size) {
 
+        // 判断登录态
         User user = (User) request.getSession().getAttribute("user");
         if (user == null) {
             return "redirect:/";
